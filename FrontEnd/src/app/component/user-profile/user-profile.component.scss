@@ -1,0 +1,14 @@
+section {
+  width: 100%;
+  height: auto;
+  .Profile {
+    background-color: rgb(232, 233, 232);
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem 0rem;
+    h4 {
+      margin: 0.3rem 0rem;
+      text-transform: capitalize;
+    }
+  }
+}

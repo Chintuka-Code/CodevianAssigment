@@ -1,0 +1,157 @@
+<main>
+  <section class="login">
+    <h1>Login</h1>
+    <div class="icon">
+      <!-- <img src="../../../assets/UserIcon/businessman.svg" alt="" /> -->
+    </div>
+    <div class="formSection">
+      <form [formGroup]="login" (submit)="loginForm()">
+        <div class="InputFeild">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            placeholder="Enter Email here"
+            id="email"
+            formControlName="email"
+          />
+          <div
+            *ngIf="login.controls.email.invalid && login.controls.email.dirty"
+          >
+            <div *ngIf="login.controls.email.errors.required" class="invalid">
+              Email is Required
+            </div>
+          </div>
+        </div>
+        <div class="InputFeild">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Enter password here"
+            formControlName="password"
+            id="email"
+          />
+          <div
+            *ngIf="
+              login.controls.password.invalid && login.controls.password.dirty
+            "
+          >
+            <div
+              *ngIf="login.controls.password.errors.required"
+              class="invalid"
+            >
+              Password Required
+            </div>
+          </div>
+        </div>
+        <input type="submit" value="Login" />
+      </form>
+    </div>
+  </section>
+
+  <section class="register">
+    <h1>Create Account</h1>
+    <div class="icon">
+      <!-- <img src="../../../assets/UserIcon/businessman.svg" alt="" /> -->
+    </div>
+    <div class="formSection">
+      <form [formGroup]="register" (submit)="RegisterForm()">
+        <div class="InputFeild">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            placeholder="Enter Email here"
+            id="email"
+            formControlName="email"
+          />
+          <div
+            *ngIf="
+              register.controls.email.invalid && register.controls.email.dirty
+            "
+          >
+            <div
+              class="invalid"
+              *ngIf="register.controls.email.errors.required"
+            >
+              Email is required
+            </div>
+          </div>
+        </div>
+
+        <div class="InputFeild">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            placeholder="Enter password here"
+            formControlName="password"
+            id="email"
+          />
+          <div
+            *ngIf="
+              register.controls.password.invalid &&
+              register.controls.password.dirty
+            "
+          >
+            <div
+              class="invalid"
+              *ngIf="register.controls.password.errors.required"
+            >
+              password is required
+            </div>
+          </div>
+        </div>
+
+        <div class="InputFeild">
+          <label for="number">Number</label>
+          <input
+            type="text"
+            placeholder="Enter number here"
+            formControlName="number"
+            id="email"
+          />
+          <div
+            *ngIf="
+              register.controls.number.invalid && register.controls.number.dirty
+            "
+          >
+            <div
+              class="invalid"
+              *ngIf="register.controls.number.errors.required"
+            >
+              number is required
+            </div>
+            <div
+              class="invalid"
+              *ngIf="register.controls.number.errors.pattern"
+            >
+              only number is allow
+            </div>
+          </div>
+        </div>
+
+        <div class="InputFeild">
+          <label for="number">Address</label>
+          <input
+            type="text"
+            placeholder="Enter Address here"
+            formControlName="address"
+            id="email"
+          />
+          <div
+            *ngIf="
+              register.controls.address.invalid &&
+              register.controls.address.dirty
+            "
+          >
+            <div
+              class="invalid"
+              *ngIf="register.controls.address.errors.required"
+            >
+              address is required
+            </div>
+          </div>
+        </div>
+        <input type="submit" value="Create" />
+      </form>
+    </div>
+  </section>
+</main>

@@ -1,0 +1,16 @@
+footer {
+  width: 100%;
+  min-height: 200px;
+  background-color: rgb(232, 232, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  .user {
+    text-align: center;
+    h1 {
+      margin: 0.5rem 0rem;
+    }
+  }
+}

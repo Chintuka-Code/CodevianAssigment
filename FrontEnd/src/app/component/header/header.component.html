@@ -1,0 +1,21 @@
+<header>
+  <div class="logo"></div>
+  <ul>
+    <li>
+      <a [routerLink]="['/main']" routerLinkActive="router-link-active"
+        >Profile</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['edit']" routerLinkActive="router-link-active">
+        EditProfile
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['user']" routerLinkActive="router-link-active">
+        All Register User
+      </a>
+    </li>
+    <li><a href="javascript:void(0)" (click)="logout()"> Logout</a></li>
+  </ul>
+</header>
